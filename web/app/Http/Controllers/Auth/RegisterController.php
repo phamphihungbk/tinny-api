@@ -24,6 +24,7 @@ class RegisterController extends Controller
      * @var UserRepository
      */
     private $userRepository;
+
     /**
      * @var WeakPasswordRule
      */

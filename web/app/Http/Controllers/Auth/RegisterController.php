@@ -24,6 +24,7 @@ class RegisterController extends Controller
      * @var UserRepository
      */
     private $userRepository;
+
     /**
      * @var WeakPasswordRule
      */
@@ -101,8 +102,8 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'is_active' => 1,
             'email_verified_at' => null,
-            'facebook' => $data['facebook'] ?? '',
-            'twitter' => $data['twitter'] ?? '',
+            'facebook' => $data['facebook'],
+            'twitter' => $data['twitter'],
         ]);
     }
 }
